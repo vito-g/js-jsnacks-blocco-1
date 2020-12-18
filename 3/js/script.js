@@ -2,7 +2,9 @@
 numero. Il programma stampa la somma di tutti i numeri
 inseriti. Esegui questo programma in due versioni, con il for
 e con il while.*/
-//
+
+// CICLO For + Array
+// --------------------------------------------------------------------------------
 // var array = [];
 // var primoNumero = prompt('inserisci il primo numero');
 // console.log(primoNumero);
@@ -30,9 +32,28 @@ e con il while.*/
 //  }
 // console.log(somma);
 
-var somma = 0;
-for ( var i=1; i <= 5; i++) {
-   var numero = prompt('inserisci un numero');
-   somma += parseInt(numero);
+
+// ALTERNATIVA, sempre con ciclo For.
+// --------------------------------------------------------------------------------
+// var somma = 0;
+// for ( var i=1; i <= 5; i++) {
+//    var numero = prompt('inserisci un numero');
+//    somma += parseInt(numero);
+//  }
+//  console.log('La somma dei 5 numeri inseriti è :' + somma);
+
+
+ // ALTERNATIVA,  con ciclo While.
+ // --------------------------------------------------------------------------------
+ var numero;
+ var somma = 0;
+ var i = 0;
+ while ( i < 5) {
+    numero = prompt('inserisci un numero');
+    /*Il parseInt è necessario qui sotto pena la lettura dei numeri inseriti come fossero stringhe: in quest'ultimo caso
+      non verrebbe stampata la somma ma i numeri inseriti un di seguito all'altro preceduti da 0 che è il valore iniziale
+      impostato per i*/
+    somma += parseInt(numero);
+    i++;
  }
- console.log('La somma dei 5 numeri inseriti è :' + somma);
+ console.log(somma);
